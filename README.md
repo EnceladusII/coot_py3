@@ -33,6 +33,9 @@ pip3 --version
    cd <your_install_directory>
    git clone https://github.com/EnceladusII/coot_py3.git 
    ```
+   
+   Replace ```<your_install_directory>``` with the actual directory where you've cloned the repository.
+   
 2. **Configure the environment variable
     
     Add an alias to easily run Coot from the terminal. Run the following commands:
@@ -44,7 +47,7 @@ pip3 --version
     source ~/.bashrc
     ```
     
-    Replace <your_install_directory> with the actual directory where you've cloned the repository.
+    Replace ```<your_install_directory>``` with the actual directory where you've cloned the repository.
     
 3. **Run the portable version of Coot-1.1.08
 
