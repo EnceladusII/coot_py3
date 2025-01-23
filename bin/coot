@@ -17,6 +17,8 @@
 #    IFS=$'\t\n'
 # fi
 
+export GDK_BACKEND=x11
+
 function check_for_no_graphics {
 
     r=0
