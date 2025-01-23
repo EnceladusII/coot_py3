@@ -2,7 +2,8 @@
 
 ## Introduction
 
-This portable version of **Coot-1.1.08** is designed to be easily used on different Linux distributions. It is based on the version of **Coot** provided by the [pemsley.coot](https://github.com/pemsley/coot.git) project.
+This portable version of **Coot-1.1.08** is designed to be easily used on different Linux distributions. It is based on the version of **Coot** provided by the [pemsley.coot](https://github.com/pemsley/coot.git) project and distributed by [CCP4 project](https://www.ccp4.ac.uk/).
+This repositorie exist only due to the worst compatibility of the initial software install on Fedora 41.
 Add a wayland compositor compatibility by adding to the script: 
 ```shell
 export GDK_BACKEND=x11
