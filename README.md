@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This portable version of **Coot-1.1.08** is designed to be easily used on different Linux distributions. It is based on the version of **Coot** provided by the **io.github.pemsley.coot** project.
+This portable version of **Coot-1.1.08** is designed to be easily used on different Linux distributions. It is based on the version of **Coot** provided by the [pemsley.coot](https://github.com/pemsley/coot.git) project.
 Add a wayland compositor compatibility by adding to the script: 
 ```shell
 export GDK_BACKEND=x11
@@ -36,7 +36,7 @@ pip3 --version
    
    Replace ```<your_install_directory>``` with the actual directory where you've cloned the repository.
    
-2. **Configure the environment variable
+2. **Configure the environment variable**
     
     Add an alias to easily run Coot from the terminal. Run the following commands:
     
@@ -49,7 +49,7 @@ pip3 --version
     
     Replace ```<your_install_directory>``` with the actual directory where you've cloned the repository.
     
-3. **Run the portable version of Coot-1.1.08
+3. **Run the portable version of Coot-1.1.08**
 
     After completing the steps above, you can start Coot by simply typing:
     
