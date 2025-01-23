@@ -1,0 +1,1404 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <requires lib="gtk" version="4.0"/>
+  <object class="GtkAdjustment" id="adjustment1">
+    <property name="upper">370</property>
+    <property name="step-increment">1</property>
+    <property name="page-increment">20</property>
+    <property name="page-size">10.1000003815</property>
+  </object>
+  <object class="GtkAdjustment" id="adjustment2">
+    <property name="upper">370</property>
+    <property name="step-increment">1</property>
+    <property name="page-increment">20</property>
+    <property name="page-size">10.1000003815</property>
+  </object>
+  <object class="GtkDialog" id="preferences_dialog">
+    <property name="title" translatable="yes">Coot: Preferences</property>
+    <property name="default-width">820</property>
+    <property name="default-height">480</property>
+    <signal name="destroy" handler="on_preferences_destroy" swapped="no"/>
+    <child>
+      <object class="GtkBox" id="dialog-vbox77">
+        <property name="visible">1</property>
+        <property name="orientation">vertical</property>
+        <property name="margin-start">4</property>
+        <property name="margin-end">4</property>
+        <property name="margin-top">4</property>
+        <property name="margin-bottom">4</property>
+        <child>
+          <object class="GtkBox" id="hbox114">
+            <property name="vexpand">1</property>
+            <property name="margin-start">4</property>
+            <property name="margin-end">4</property>
+            <property name="margin-top">4</property>
+            <property name="margin-bottom">4</property>
+            <child>
+              <object class="GtkFrame" id="frame137">
+                <property name="visible">1</property>
+                <property name="child">
+                  <object class="GtkBox" id="preferences_toolbar">
+                    <style>
+                      <class name="toolbar"/>
+                    </style>
+                    <property name="orientation">vertical</property>
+                    <child>
+                      <object class="GtkToggleButton" id="preferences_general_radiotoolbutton">
+                        <property name="label" translatable="yes">General</property>
+                        <property name="use-underline">1</property>
+                        <property name="active">1</property>
+                        <child>
+                          <object class="GtkBox">
+                            <property name="orientation">vertical</property>
+                            <property name="spacing">5</property>
+                            <property name="halign">center</property>
+                            <child>
+                              <object class="GtkImage">
+                                <property name="icon-name">preferences-system</property>
+                             `</object>
+                            </child>
+                            <child>
+                              <object class="GtkLabel">
+                                <property name="label" translatable="yes">General</property>
+                              </object>
+                            </child>
+                          </object>
+                        </child>
+                        <signal name="toggled" handler="on_preferences_general_radiotoolbutton_toggled" swapped="no"/>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkToggleButton" id="preferences_bond_radiotoolbutton">
+                        <property name="label" translatable="yes">Bonds</property>
+                        <property name="use-underline">1</property>
+                        <property name="group">preferences_general_radiotoolbutton</property>
+                        <child>
+                          <object class="GtkBox">
+                            <property name="orientation">vertical</property>
+                            <property name="spacing">5</property>
+                            <property name="halign">center</property>
+                            <child>
+                              <object class="GtkImage">
+                                <property name="icon-name">preferences-system-sharing</property>
+                             `</object>
+                            </child>
+                            <child>
+                              <object class="GtkLabel">
+                                <property name="label" translatable="yes">Bonds</property>
+                              </object>
+                            </child>
+                          </object>
+                        </child>
+                        <signal name="toggled" handler="on_preferences_bond_radiotoolbutton_toggled" swapped="no"/>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkToggleButton" id="preferences_map_radiotoolbutton">
+                        <property name="label" translatable="yes">Maps</property>
+                        <property name="use-underline">1</property>
+                        <property name="group">preferences_general_radiotoolbutton</property>
+                        <child>
+                          <object class="GtkBox">
+                            <property name="orientation">vertical</property>
+                            <property name="spacing">5</property>
+                            <property name="halign">center</property>
+                            <child>
+                              <object class="GtkImage">
+                                <property name="icon-name">map</property>
+                             `</object>
+                            </child>
+                            <child>
+                              <object class="GtkLabel">
+                                <property name="label" translatable="yes">Maps</property>
+                              </object>
+                            </child>
+                          </object>
+                        </child>
+                        <signal name="toggled" handler="on_preferences_map_radiotoolbutton_toggled" swapped="no"/>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkToggleButton" id="preferences_geometry_radiotoolbutton">
+                        <property name="label" translatable="yes">Geometry</property>
+                        <property name="use-underline">1</property>
+                        <property name="group">preferences_general_radiotoolbutton</property>
+                        <child>
+                          <object class="GtkBox">
+                            <property name="orientation">vertical</property>
+                            <property name="spacing">5</property>
+                            <property name="halign">center</property>
+                            <child>
+                              <object class="GtkImage">
+                                <property name="icon-name">applications-accessories</property>
+                             `</object>
+                            </child>
+                            <child>
+                              <object class="GtkLabel">
+                                <property name="label" translatable="yes">Geometry</property>
+                              </object>
+                            </child>
+                          </object>
+                        </child>
+                        <signal name="toggled" handler="on_preferences_geometry_radiotoolbutton_toggled" swapped="no"/>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkToggleButton" id="preferences_colour_radiotoolbutton">
+                        <property name="label" translatable="yes">Colours</property>
+                        <property name="use-underline">1</property>
+                        <property name="group">preferences_general_radiotoolbutton</property>
+                        <child>
+                          <object class="GtkBox">
+                            <property name="orientation">vertical</property>
+                            <property name="spacing">5</property>
+                            <property name="halign">center</property>
+                            <child>
+                              <object class="GtkImage">
+                                <property name="icon-name">applications-graphics</property>
+                             `</object>
+                            </child>
+                            <child>
+                              <object class="GtkLabel">
+                                <property name="label" translatable="yes">Colours</property>
+                              </object>
+                            </child>
+                          </object>
+                        </child>
+                        <signal name="toggled" handler="on_preferences_colour_radiotoolbutton_toggled" swapped="no"/>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkToggleButton" id="preferences_other_radiotoolbutton">
+                        <property name="label" translatable="yes">Others</property>
+                        <property name="use-underline">1</property>
+                        <property name="group">preferences_general_radiotoolbutton</property>
+                        <child>
+                          <object class="GtkBox">
+                            <property name="orientation">vertical</property>
+                            <property name="spacing">5</property>
+                            <property name="halign">center</property>
+                            <child>
+                              <object class="GtkImage">
+                                <property name="icon-name">dialog-question</property>
+                             `</object>
+                            </child>
+                            <child>
+                              <object class="GtkLabel">
+                                <property name="label" translatable="yes">Others</property>
+                              </object>
+                            </child>
+                          </object>
+                        </child>
+                        <signal name="toggled" handler="on_preferences_other_radiotoolbutton_toggled" swapped="no"/>
+                      </object>
+                    </child>
+                  </object>
+                </property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkNotebook" id="preferences_notebook">
+                <property name="hexpand">1</property>
+                <property name="visible">1</property>
+                <property name="focusable">1</property>
+                <property name="scrollable">1</property>
+                <child>
+                  <object class="GtkNotebookPage">
+                    <property name="position">4</property>
+                    <property name="tab">
+                      <object class="GtkLabel" id="label225">
+                        <property name="visible">1</property>
+                        <property name="label" translatable="yes">Coordinates Recentering</property>
+                        <property name="justify">center</property>
+                      </object>
+                    </property>
+                    <property name="child">
+                      <object class="GtkFrame" id="preferences_recentre_pdb">
+                        <property name="visible">1</property>
+                        <property name="child">
+                          <object class="GtkBox" id="vbox263">
+                            <property name="orientation">vertical</property>
+                            <child>
+                              <object class="GtkLabel" id="label604">
+                                <property name="valign">center</property>
+                                <property name="visible">1</property>
+                                <property name="label" translatable="yes">Recentre on read new PDB?</property>
+                                <property name="justify">center</property>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="GtkFrame" id="frame262">
+                                <property name="visible">1</property>
+                                <property name="child">
+                                  <object class="GtkBox" id="vbox264">
+                                    <property name="orientation">vertical</property>
+                                    <child>
+                                      <object class="GtkCheckButton" id="preferences_recentre_pdb_on_radiobutton">
+                                        <property name="valign">center</property>
+                                        <property name="label" translatable="yes">Yes</property>
+                                        <property name="use-underline">1</property>
+                                        <signal name="toggled" handler="on_preferences_recentre_pdb_on_radiobutton_toggled" swapped="no"/>
+                                      </object>
+                                    </child>
+                                    <child>
+                                      <object class="GtkCheckButton" id="preferences_recentre_pdb_off_radiobutton">
+                                        <property name="valign">center</property>
+                                        <property name="label" translatable="yes">No</property>
+                                        <property name="use-underline">1</property>
+                                        <property name="group">preferences_recentre_pdb_on_radiobutton</property>
+                                        <signal name="toggled" handler="on_preferences_recentre_pdb_off_radiobutton_toggled" swapped="no"/>
+                                      </object>
+                                    </child>
+                                  </object>
+                                </property>
+                              </object>
+                            </child>
+                          </object>
+                        </property>
+                      </object>
+                    </property>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkNotebookPage">
+                    <property name="position">5</property>
+                    <property name="tab">
+                      <object class="GtkLabel" id="label511">
+                        <property name="visible">1</property>
+                        <property name="label" translatable="yes">Smooth Recentering</property>
+                      </object>
+                    </property>
+                    <property name="child">
+                      <object class="GtkFrame" id="preferences_smooth_scroll">
+                        <property name="visible">1</property>
+                        <property name="child">
+                          <object class="GtkBox" id="vbox259">
+                            <property name="orientation">vertical</property>
+                            <property name="spacing">10</property>
+                            <child>
+                              <object class="GtkLabel" id="label594">
+                                <property name="valign">center</property>
+                                <property name="visible">1</property>
+                                <property name="label" translatable="yes">Recentering Smooth Scrolling</property>
+                                <property name="justify">center</property>
+                                <property name="margin-start">4</property>
+                                <property name="margin-end">4</property>
+                                <property name="margin-top">8</property>
+                                <property name="margin-bottom">4</property>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="GtkFrame" id="frame258">
+                                <property name="valign">center</property>
+                                <property name="visible">1</property>
+                                <property name="child">
+                                  <object class="GtkBox" id="vbox260">
+                                    <property name="orientation">vertical</property>
+                                    <child>
+                                      <object class="GtkCheckButton" id="preferences_smooth_scroll_on_radiobutton">
+                                        <property name="valign">center</property>
+                                        <property name="label" translatable="yes">Yes</property>
+                                        <property name="use-underline">1</property>
+                                        <signal name="toggled" handler="on_preferences_smooth_scroll_on_radiobutton_toggled" swapped="no"/>
+                                      </object>
+                                    </child>
+                                    <child>
+                                      <object class="GtkCheckButton" id="preferences_smooth_scroll_off_radiobutton">
+                                        <property name="valign">center</property>
+                                        <property name="label" translatable="yes">No</property>
+                                        <property name="use-underline">1</property>
+                                        <property name="group">preferences_smooth_scroll_on_radiobutton</property>
+                                        <signal name="toggled" handler="on_preferences_smooth_scroll_off_radiobutton_toggled" swapped="no"/>
+                                      </object>
+                                    </child>
+                                  </object>
+                                </property>
+                                <child type="label">
+                                  <object class="GtkLabel" id="label602">
+                                    <property name="visible">1</property>
+                                    <property name="use-markup">1</property>
+                                  </object>
+                                </child>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="GtkFrame" id="frame254">
+                                <property name="valign">center</property>
+                                <property name="visible">1</property>
+                                <property name="child">
+                                  <object class="GtkBox" id="hbox327">
+                                    <property name="spacing">4</property>
+                                    <child>
+                                      <object class="GtkLabel" id="label595">
+                                        <property name="halign">center</property>
+                                        <property name="visible">1</property>
+                                        <property name="label" translatable="yes">    Number of Steps: </property>
+                                        <property name="justify">center</property>
+                                      </object>
+                                    </child>
+                                    <child>
+                                      <object class="GtkEntry" id="preferences_smooth_scroll_steps_entry">
+                                        <property name="halign">center</property>
+                                        <property name="margin-start">4</property>
+                                        <property name="margin-end">4</property>
+                                        <property name="margin-top">4</property>
+                                        <property name="margin-bottom">4</property>
+                                        <signal name="activate" handler="on_preferences_smooth_scroll_steps_entry_activate" swapped="no"/>
+                                        <signal name="changed" handler="on_preferences_smooth_scroll_steps_entry_changed" swapped="no"/>
+                                      </object>
+                                    </child>
+                                    <child>
+                                      <object class="GtkLabel" id="label597">
+                                        <property name="halign">center</property>
+                                        <property name="visible">1</property>
+                                        <property name="label" translatable="yes">  </property>
+                                        <property name="justify">center</property>
+                                      </object>
+                                    </child>
+                                  </object>
+                                </property>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="GtkFrame" id="frame255">
+                                <property name="visible">1</property>
+                                <property name="child">
+                                  <object class="GtkBox" id="hbox328">
+                                    <child>
+                                      <object class="GtkLabel" id="label598">
+                                        <property name="halign">center</property>
+                                        <property name="visible">1</property>
+                                        <property name="label" translatable="yes">Do Not Scroll for
+distances more than:</property>
+                                        <property name="justify">center</property>
+                                      </object>
+                                    </child>
+                                    <child>
+                                      <object class="GtkEntry" id="preferences_smooth_scroll_limit_entry">
+                                        <property name="margin-start">4</property>
+                                        <property name="margin-end">4</property>
+                                        <property name="margin-top">4</property>
+                                        <property name="margin-bottom">4</property>
+                                        <signal name="activate" handler="on_preferences_smooth_scroll_limit_entry_activate" swapped="no"/>
+                                        <signal name="changed" handler="on_preferences_smooth_scroll_limit_entry_changed" swapped="no"/>
+                                      </object>
+                                    </child>
+                                    <child>
+                                      <object class="GtkLabel" id="label599">
+                                        <property name="halign">center</property>
+                                        <property name="visible">1</property>
+                                        <property name="label" translatable="yes">A</property>
+                                        <property name="justify">center</property>
+                                      </object>
+                                    </child>
+                                  </object>
+                                </property>
+                              </object>
+                            </child>
+                          </object>
+                        </property>
+                      </object>
+                    </property>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkNotebookPage">
+                    <property name="position">6</property>
+                    <property name="child">
+                      <object class="GtkFrame" id="preferences_hid">
+                        <property name="visible">1</property>
+                        <property name="child">
+                          <object class="GtkBox" id="vbox238">
+                            <property name="orientation">vertical</property>
+                            <child>
+                              <object class="GtkLabel" id="label563">
+                                <property name="valign">center</property>
+                                <property name="visible">1</property>
+                                <property name="label" translatable="yes">Virtual trackball</property>
+                                <property name="justify">center</property>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="GtkFrame" id="frame233">
+                                <property name="visible">1</property>
+                                <property name="child">
+                                  <object class="GtkBox" id="vbox239">
+                                    <property name="orientation">vertical</property>
+                                    <child>
+                                      <object class="GtkCheckButton" id="preferences_hid_spherical_radiobutton">
+                                        <property name="valign">center</property>
+                                        <property name="label" translatable="yes">Spherical Surface</property>
+                                        <property name="use-underline">1</property>
+                                        <signal name="toggled" handler="on_preferences_hid_spherical_radiobutton_toggled" swapped="no"/>
+                                      </object>
+                                    </child>
+                                    <child>
+                                      <object class="GtkCheckButton" id="preferences_hid_flat_radiobutton">
+                                        <property name="valign">center</property>
+                                        <property name="label" translatable="yes">Turntable Mode (Flat)</property>
+                                        <property name="use-underline">1</property>
+                                        <property name="group">preferences_hid_spherical_radiobutton</property>
+                                        <signal name="toggled" handler="on_preferences_hid_flat_radiobutton_toggled" swapped="no"/>
+                                      </object>
+                                    </child>
+                                  </object>
+                                </property>
+                              </object>
+                            </child>
+                          </object>
+                        </property>
+                      </object>
+                    </property>
+                    <property name="tab">
+                      <object class="GtkLabel" id="label476">
+                        <property name="visible">1</property>
+                        <property name="label" translatable="yes">    HID    </property>
+                      </object>
+                    </property>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkNotebookPage">
+                    <property name="position">7</property>
+                    <property name="child">
+                      <object class="GtkFrame" id="preferences_bond_parameters">
+                        <property name="visible">1</property>
+                        <property name="child">
+                          <object class="GtkBox" id="vbox222">
+                            <property name="orientation">vertical</property>
+                            <child>
+                              <object class="GtkBox" id="vbox223">
+                                <property name="vexpand">1</property>
+                                <property name="orientation">vertical</property>
+                                <child>
+                                  <object class="GtkFrame" id="frame212">
+                                    <property name="visible">1</property>
+                                    <property name="child">
+                                      <object class="GtkBox" id="vbox224">
+                                        <property name="orientation">vertical</property>
+                                        <child>
+                                          <object class="GtkBox" id="hbox304">
+                                            <child>
+                                              <object class="GtkComboBoxText" id="preferences_bond_width_combobox">
+                                                <property name="halign">center</property>
+                                                <signal name="changed" handler="on_preferences_bond_width_combobox_changed" swapped="no"/>
+                                              </object>
+                                            </child>
+                                            <child>
+                                              <object class="GtkLabel" id="label526">
+                                                <property name="label" translatable="yes"> units </property>
+                                              </object>
+                                            </child>
+                                          </object>
+                                        </child>
+                                      </object>
+                                    </property>
+                                    <child type="label">
+                                      <object class="GtkLabel" id="label527">
+                                        <property name="visible">1</property>
+                                        <property name="label" translatable="yes">Molecule Bond Width:</property>
+                                      </object>
+                                    </child>
+                                  </object>
+                                </child>
+                              </object>
+                            </child>
+                          </object>
+                        </property>
+                      </object>
+                    </property>
+                    <property name="tab">
+                      <object class="GtkLabel" id="label478">
+                        <property name="visible">1</property>
+                        <property name="label" translatable="yes">Bond Parameters</property>
+                      </object>
+                    </property>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkNotebookPage">
+                    <property name="position">8</property>ba
+                    <property name="child">
+                      <object class="GtkFrame" id="preferences_bond_colours">
+                        <property name="visible">1</property>
+                        <property name="child">
+                          <object class="GtkBox" id="vbox212">
+                            <property name="orientation">vertical</property>
+                            <property name="spacing">9</property>
+                            <child>
+                              <object class="GtkFrame" id="frame200">
+                                <property name="child">
+                                  <object class="GtkBox" id="vbox213">
+                                    <property name="orientation">vertical</property>
+                                    <child>
+                                      <object class="GtkLabel" id="label495">
+                                        <property name="valign">center</property>
+                                        <property name="label" translatable="yes">  New molecule rotates colour map</property>
+                                      </object>
+                                    </child>
+                                    <child>
+                                      <object class="GtkBox" id="hbox287">
+                                        <child>
+                                          <object class="GtkLabel" id="label496">
+                                            <property name="halign">center</property>
+                                            <property name="label" translatable="yes">   by  </property>
+                                            <property name="justify">center</property>
+                                            <property name="yalign">0.95</property>
+                                          </object>
+                                        </child>
+                                        <child>
+                                          <object class="GtkScale" id="preferences_bond_colours_hscale">
+                                            <property name="orientation">horizontal</property>
+                                            <property name="hexpand">1</property>
+                                            <property name="adjustment">adjustment1</property>
+                                            <signal name="value-changed" handler="on_preferences_bond_colours_hscale_value_changed" swapped="no"/>
+                                          </object>
+                                        </child>
+                                        <child>
+                                          <object class="GtkLabel" id="label497">
+                                            <property name="halign">center</property>
+                                            <property name="visible">1</property>
+                                            <property name="label" translatable="yes">  degrees   </property>
+                                            <property name="justify">center</property>
+                                            <property name="yalign">0.95</property>
+                                          </object>
+                                        </child>
+                                      </object>
+                                    </child>
+                                  </object>
+                                </property>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="GtkFrame" id="frame201">
+                                <property name="valign">center</property>
+                                <property name="visible">1</property>
+                                <property name="child">
+                                  <object class="GtkCheckButton" id="preferences_bond_colours_checkbutton">
+                                    <property name="visible">1</property>
+                                    <property name="label" translatable="yes"> Change colour for Carbons only</property>
+                                    <property name="focusable">1</property>
+                                    <property name="use-underline">1</property>
+                                    <signal name="toggled" handler="on_preferences_bond_colours_checkbutton_toggled" swapped="no"/>
+                                  </object>
+                                </property>
+                              </object>
+                            </child>
+                          </object>
+                        </property>
+                        <child type="label">
+                          <object class="GtkLabel" id="label498">
+                            <property name="visible">1</property>
+                            <property name="label" translatable="yes">Colour Map Rotation [Molecule Independent] </property>
+                          </object>
+                        </child>
+                      </object>
+                    </property>
+                    <property name="tab">
+                      <object class="GtkLabel" id="label479">
+                        <property name="visible">1</property>
+                        <property name="label" translatable="yes">Bond Colours</property>
+                      </object>
+                    </property>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkNotebookPage">
+                    <property name="position">9</property>
+                    <property name="child">
+                      <object class="GtkFrame" id="preferences_map_parameters">
+                        <property name="visible">1</property>
+                        <property name="child">
+                          <object class="GtkBox" id="vbox232">
+                            <property name="orientation">vertical</property>
+                            <child>
+                              <object class="GtkLabel" id="label550">
+                                <property name="valign">center</property>
+                                <property name="visible">1</property>
+                                <property name="label" translatable="yes">Density Settings</property>
+                                <property name="justify">center</property>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="GtkFrame" id="frame223">
+                                <property name="child">
+                                  <object class="GtkBox" id="hbox316">
+                                    <child>
+                                      <object class="GtkLabel" id="label551">
+                                        <property name="halign">center</property>
+                                        <property name="label" translatable="yes">Map Radius: </property>
+                                        <property name="justify">center</property>
+                                      </object>
+                                    </child>
+                                    <child>
+                                      <object class="GtkEntry" id="preferences_map_radius_entry">
+                                        <property name="focusable">1</property>
+                                        <signal name="activate" handler="on_preferences_map_radius_entry_activate" swapped="no"/>
+                                        <signal name="changed" handler="on_preferences_map_radius_entry_changed" swapped="no"/>
+                                      </object>
+                                    </child>
+                                    <child>
+                                      <object class="GtkLabel" id="label552">
+                                        <property name="halign">center</property>
+                                        <property name="visible">1</property>
+                                        <property name="label" translatable="yes">Ångström</property>
+                                        <property name="justify">center</property>
+                                      </object>
+                                    </child>
+                                    <child>
+                                      <object class="GtkLabel" id="label553">
+                                        <property name="halign">center</property>
+                                        <property name="visible">1</property>
+                                        <property name="label" translatable="yes">  </property>
+                                        <property name="justify">center</property>
+                                      </object>
+                                    </child>
+                                  </object>
+                                </property>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="GtkFrame" id="frame224">
+                                <property name="child">
+                                  <object class="GtkBox" id="hbox317">
+                                    <child>
+                                      <object class="GtkLabel" id="label554">
+                                        <property name="halign">center</property>
+                                        <property name="label" translatable="yes">Increment Size</property>
+                                        <property name="justify">center</property>
+                                      </object>
+                                    </child>
+                                    <child>
+                                      <object class="GtkEntry" id="preferences_map_increment_size_entry">
+                                        <property name="focusable">1</property>
+                                        <signal name="activate" handler="on_preferences_map_increment_size_entry_activate" swapped="no"/>
+                                        <signal name="changed" handler="on_preferences_map_increment_size_entry_changed" swapped="no"/>
+                                      </object>
+                                    </child>
+                                    <child>
+                                      <object class="GtkLabel" id="label555">
+                                        <property name="halign">center</property>
+                                        <property name="label" translatable="yes">e/A^3</property>
+                                        <property name="justify">center</property>
+                                      </object>
+                                    </child>
+                                  </object>
+                                </property>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="GtkFrame" id="frame225">
+                                <property name="child">
+                                  <object class="GtkBox" id="hbox318">
+                                    <child>
+                                      <object class="GtkLabel" id="label556">
+                                        <property name="halign">center</property>
+                                        <property name="label" translatable="yes">Diff Map Increment</property>
+                                        <property name="justify">center</property>
+                                      </object>
+                                    </child>
+                                    <child>
+                                      <object class="GtkEntry" id="preferences_map_diff_increment_entry">
+                                        <property name="focusable">1</property>
+                                        <signal name="activate" handler="on_preferences_map_diff_increment_entry_activate" swapped="no"/>
+                                        <signal name="changed" handler="on_preferences_map_diff_increment_entry_changed" swapped="no"/>
+                                      </object>
+                                    </child>
+                                    <child>
+                                      <object class="GtkLabel" id="label557">
+                                        <property name="halign">center</property>
+                                        <property name="label" translatable="yes">e/A^3</property>
+                                        <property name="justify">center</property>
+                                      </object>
+                                    </child>
+                                  </object>
+                                </property>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="GtkFrame" id="frame226">
+                                <property name="child">
+                                  <object class="GtkBox" id="hbox319">
+                                    <child>
+                                      <object class="GtkLabel" id="label558">
+                                        <property name="halign">center</property>
+                                        <property name="label" translatable="yes">Sampling Rate: </property>
+                                        <property name="justify">center</property>
+                                      </object>
+                                    </child>
+                                    <child>
+                                      <object class="GtkEntry" id="preferences_map_sampling_entry">
+                                        <property name="visible">1</property>
+                                        <property name="focusable">1</property>
+                                        <property name="tooltip-text" translatable="yes">Shannon Sampling multiplier. 1.5 is the standard value. Use larger numbers for smoother maps</property>
+                                        <signal name="activate" handler="on_preferences_map_sampling_entry_activate" swapped="no"/>
+                                        <signal name="changed" handler="on_preferences_map_sampling_entry_changed" swapped="no"/>
+                                      </object>
+                                    </child>
+                                  </object>
+                                </property>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="GtkFrame" id="frame227">
+                                <property name="child">
+                                  <object class="GtkBox" id="vbox233">
+                                    <property name="orientation">vertical</property>
+                                    <child>
+                                      <object class="GtkCheckButton" id="preferences_map_dynamic_sampling_checkbutton">
+                                        <property name="valign">center</property>
+                                        <property name="label" translatable="yes">Dynamic Map Sampling</property>
+                                        <property name="focusable">1</property>
+                                        <property name="use-underline">1</property>
+                                        <signal name="toggled" handler="on_preferences_map_dynamic_sampling_checkbutton_toggled" swapped="no"/>
+                                      </object>
+                                    </child>
+                                    <child>
+                                      <object class="GtkCheckButton" id="preferences_map_dynamic_size_checkbutton">
+                                        <property name="valign">center</property>
+                                        <property name="label" translatable="yes">Dynamic Map Display Size</property>
+                                        <property name="focusable">1</property>
+                                        <property name="use-underline">1</property>
+                                        <signal name="toggled" handler="on_preferences_map_dynamic_size_checkbutton_toggled" swapped="no"/>
+                                      </object>
+                                    </child>
+                                  </object>
+                                </property>
+                              </object>
+                            </child>
+                          </object>
+                        </property>
+                      </object>
+                    </property>
+                    <property name="tab">
+                      <object class="GtkLabel" id="label480">
+                        <property name="visible">1</property>
+                        <property name="label" translatable="yes">Map Parameters</property>
+                      </object>
+                    </property>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkNotebookPage">
+                    <property name="position">10</property>
+                    <property name="child">
+                      <object class="GtkFrame" id="preferences_map_colours">
+                        <property name="visible">1</property>
+                        <property name="child">
+                          <object class="GtkBox" id="vbox236">
+                            <property name="orientation">vertical</property>
+                            <child>
+                              <object class="GtkFrame" id="frame231">
+                                <property name="visible">1</property>
+                                <property name="child">
+                                  <object class="GtkBox" id="vbox237">
+                                    <property name="orientation">vertical</property>
+                                    <child>
+                                      <object class="GtkCheckButton" id="preferences_diff_map_colours_coot_radiobutton">
+                                        <property name="valign">center</property>
+                                        <property name="label" translatable="yes">Coot colours</property>
+                                        <property name="tooltip-text" translatable="yes">positive - green; negative - red</property>
+                                        <property name="use-underline">1</property>
+                                        <signal name="toggled" handler="on_preferences_diff_map_colours_coot_radiobutton_toggled" swapped="no"/>
+                                      </object>
+                                    </child>
+                                    <child>
+                                      <object class="GtkCheckButton" id="preferences_diff_map_colours_o_radiobutton">
+                                        <property name="valign">center</property>
+                                        <property name="label" translatable="yes">O colours</property>
+                                        <property name="tooltip-text" translatable="yes">positive - red; negative - green</property>
+                                        <property name="use-underline">1</property>
+                                        <property name="group">preferences_diff_map_colours_coot_radiobutton</property>
+                                        <signal name="toggled" handler="on_preferences_diff_map_colours_o_radiobutton_toggled" swapped="no"/>
+                                      </object>
+                                    </child>
+                                  </object>
+                                </property>
+                                <child type="label">
+                                  <object class="GtkLabel" id="label758">
+                                    <property name="visible">1</property>
+                                    <property name="label" translatable="yes">Swap difference map colours?</property>
+                                  </object>
+                                </child>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="GtkFrame" id="frame294">
+                                <property name="valign">center</property>
+                                <property name="visible">1</property>
+                                <property name="child">
+                                  <object class="GtkBox" id="vbox310">
+                                    <property name="orientation">vertical</property>
+                                    <child>
+                                      <object class="GtkBox" id="hbox416">
+                                        <property name="vexpand">1</property>
+                                        <child>
+                                          <object class="GtkLabel" id="label756">
+                                            <property name="halign">center</property>
+                                            <property name="visible">1</property>
+                                            <property name="label" translatable="yes">   by  </property>
+                                            <property name="justify">center</property>
+                                            <property name="yalign">0.95</property>
+                                          </object>
+                                        </child>
+                                        <child>
+                                          <object class="GtkScale" id="preferences_map_colours_hscale">
+                                            <property name="orientation">horizontal</property>
+                                            <property name="hexpand">1</property>
+                                            <property name="visible">True</property>
+                                            <property name="adjustment">adjustment2</property>
+                                            <signal name="value-changed" handler="on_preferences_map_colours_hscale_value_changed" swapped="no"/>
+                                          </object>
+                                        </child>
+                                        <child>
+                                          <object class="GtkLabel" id="label757">
+                                            <property name="halign">center</property>
+                                            <property name="visible">1</property>
+                                            <property name="label" translatable="yes">  degrees   </property>
+                                            <property name="justify">center</property>
+                                            <property name="yalign">0.95</property>
+                                          </object>
+                                        </child>
+                                      </object>
+                                    </child>
+                                  </object>
+                                </property>
+                                <child type="label">
+                                  <object class="GtkLabel" id="label759">
+                                    <property name="visible">1</property>
+                                    <property name="label" translatable="yes">New map rotates colour map [map independent]</property>
+                                  </object>
+                                </child>
+                              </object>
+                            </child>
+                          </object>
+                        </property>
+                      </object>
+                    </property>
+                    <property name="tab">
+                      <object class="GtkLabel" id="label510">
+                        <property name="visible">1</property>
+                        <property name="label" translatable="yes">Map Colours</property>
+                      </object>
+                    </property>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkNotebookPage">
+                    <property name="position">11</property>
+                    <property name="child">
+                      <object class="GtkFrame" id="preferences_map_drag">
+                        <property name="visible">1</property>
+                        <property name="child">
+                          <object class="GtkBox" id="vbox261">
+                            <property name="orientation">vertical</property>
+                            <child>
+                              <object class="GtkLabel" id="label603">
+                                <property name="valign">center</property>
+                                <property name="visible">1</property>
+                                <property name="label" translatable="yes">Active Map on Dragging?</property>
+                                <property name="justify">center</property>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="GtkFrame" id="frame260">
+                                <property name="visible">1</property>
+                                <property name="child">
+                                  <object class="GtkBox" id="vbox262">
+                                    <property name="orientation">vertical</property>
+                                    <child>
+                                      <object class="GtkCheckButton" id="preferences_map_drag_on_radiobutton">
+                                        <property name="valign">center</property>
+                                        <property name="label" translatable="yes">Yes</property>
+                                        <property name="use-underline">1</property>
+                                        <signal name="toggled" handler="on_preferences_map_drag_on_radiobutton_toggled" swapped="no"/>
+                                      </object>
+                                    </child>
+                                    <child>
+                                      <object class="GtkCheckButton" id="preferences_map_drag_off_radiobutton">
+                                        <property name="valign">center</property>
+                                        <property name="label" translatable="yes">No</property>
+                                        <property name="use-underline">1</property>
+                                        <property name="group">preferences_map_drag_on_radiobutton</property>
+                                        <signal name="toggled" handler="on_preferences_map_drag_off_radiobutton_toggled" swapped="no"/>
+                                      </object>
+                                    </child>
+                                  </object>
+                                </property>
+                              </object>
+                            </child>
+                          </object>
+                        </property>
+                      </object>
+                    </property>
+                    <property name="tab">
+                      <object class="GtkLabel" id="label512">
+                        <property name="visible">1</property>
+                        <property name="label" translatable="yes">Dragged Map</property>
+                      </object>
+                    </property>
+                  </object>
+                </child>
+
+                <child>
+                  <object class="GtkNotebookPage">
+                    <property name="position">12</property>
+                    <property name="child">
+                      <object class="GtkFrame" id="preferences_cis_peptides">
+                        <property name="visible">1</property>
+                        <property name="child">
+                          <object class="GtkBox" id="vbox139">
+                            <property name="orientation">vertical</property>
+                            <child>
+                              <object class="GtkLabel" id="label226">
+                                <property name="valign">center</property>
+                                <property name="visible">1</property>
+                                <property name="label" translatable="yes">Mark cis-Peptides as Bad in Geometry Graph?</property>
+                                <property name="justify">center</property>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="GtkFrame" id="frame136">
+                                <property name="visible">1</property>
+                                <property name="child">
+                                  <object class="GtkBox" id="vbox140">
+                                    <property name="orientation">vertical</property>
+                                    <child>
+                                      <object class="GtkCheckButton" id="preferences_geometry_cis_peptide_bad_yes_radiobutton">
+                                        <property name="valign">center</property>
+                                        <property name="label" translatable="yes"> Yes</property>
+                                        <property name="use-underline">1</property>
+                                        <signal name="toggled" handler="on_preferences_geometry_cis_peptide_bad_yes_radiobutton_toggled" swapped="no"/>
+                                      </object>
+                                    </child>
+                                    <child>
+                                      <object class="GtkCheckButton" id="preferences_geometry_cis_peptide_bad_no_radiobutton">
+                                        <property name="valign">center</property>
+                                        <property name="label" translatable="yes"> No</property>
+                                        <property name="use-underline">1</property>
+                                        <property name="group">preferences_geometry_cis_peptide_bad_yes_radiobutton</property>
+                                        <signal name="toggled" handler="on_preferences_geometry_cis_peptide_bad_no_radiobutton_toggled" swapped="no"/>
+                                      </object>
+                                    </child>
+                                  </object>
+                                </property>
+                              </object>
+                            </child>
+                          </object>
+                        </property>
+                      </object>
+                    </property>
+                    <property name="tab">
+                      <object class="GtkLabel" id="label568">
+                        <property name="visible">1</property>
+                        <property name="label" translatable="yes">cis-Peptides</property>
+                      </object>
+                    </property>
+                  </object>
+                </child>
+
+                <child>
+                  <object class="GtkNotebookPage">
+                    <property name="tab">
+                      <object class="GtkLabel">
+                        <property name="visible">1</property>
+                        <property name="label" translatable="yes">Default B-factor</property>
+                      </object>
+                    </property>
+                    <property name="position">17</property>
+                    <property name="child">
+                      <object class="GtkFrame" id="preferences_default_b_factor_frame">
+                        <property name="vexpand">0</property>
+                        <child>
+                          <object class="GtkBox" id="preferences_default_b_factor_vbox">
+                            <property name="vexpand">0</property>
+                            <property name="orientation">vertical</property>
+                            <child>
+                              <object class="GtkBox" id="prefences_default_b_factor_hbox">
+                                <property name="vexpand">0</property>
+                                <property name="orientation">horizontal</property>
+                                <child>
+                                  <object class="GtkLabel">
+                                    <property name="label" translatable="yes">Default Temperature Factor: </property>
+                                    <property name="vexpand">0</property>
+                                    <property name="justify">center</property>
+                                  </object>
+                                </child>
+                                <child>
+                                  <object class="GtkEntry" id="preferences_default_b_factor_entry">
+                                    <property name="vexpand">0</property>
+                                    <property name="width-request">5</property>
+                                    <property name="can-focus">1</property>
+                                    <signal name="activate" handler="on_preferences_default_b_factor_entry_activate" swapped="no"/>
+                                  </object>
+                                </child>
+                              </object>
+                            </child>
+                          </object>
+                        </child>
+                      </object>
+                    </property>
+                  </object>
+                </child>
+
+                <child>
+                  <object class="GtkNotebookPage">
+                    <property name="position">13</property>
+                    <property name="child">
+                      <object class="GtkFrame" id="preferences_background_colour">
+                        <property name="visible">1</property>
+                        <property name="child">
+                          <object class="GtkBox" id="vbox234">
+                            <property name="orientation">vertical</property>
+                            <child>
+                              <object class="GtkLabel" id="label561">
+                                <property name="valign">center</property>
+                                <property name="visible">1</property>
+                                <property name="label" translatable="yes">Background colour</property>
+                                <property name="justify">center</property>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="GtkFrame" id="frame229">
+                                <property name="visible">1</property>
+                                <property name="child">
+                                  <object class="GtkBox" id="vbox235">
+                                    <property name="orientation">vertical</property>
+                                    <child>
+                                      <object class="GtkCheckButton" id="preferences_bg_colour_black_radiobutton">
+                                        <property name="valign">center</property>
+                                        <property name="label" translatable="yes">Black</property>
+                                        <property name="use-underline">1</property>
+                                        <signal name="toggled" handler="on_preferences_bg_colour_black_radiobutton_toggled" swapped="no"/>
+                                      </object>
+                                    </child>
+                                    <child>
+                                      <object class="GtkCheckButton" id="preferences_bg_colour_white_radiobutton">
+                                        <property name="valign">center</property>
+                                        <property name="label" translatable="yes">White</property>
+                                        <property name="use-underline">1</property>
+                                        <property name="group">preferences_bg_colour_black_radiobutton</property>
+                                        <signal name="toggled" handler="on_preferences_bg_colour_white_radiobutton_toggled" swapped="no"/>
+                                      </object>
+                                    </child>
+                                    <child>
+                                      <object class="GtkBox" id="hbox322">
+                                        <property name="valign">center</property>
+                                        <child>
+                                          <object class="GtkCheckButton" id="preferences_bg_colour_own_radiobutton">
+                                            <property name="halign">center</property>
+                                            <property name="label" translatable="yes">Own colour</property>
+                                            <property name="tooltip-text" translatable="yes">Select to choose you own colour</property>
+                                            <property name="use-underline">1</property>
+                                            <property name="group">preferences_bg_colour_black_radiobutton</property>
+                                            <signal name="toggled" handler="on_preferences_bg_colour_own_radiobutton_toggled" swapped="no"/>
+                                          </object>
+                                        </child>
+
+                                        <!-- dynamcially put the color button in a box so that we can delete the contents of the box.
+                                              This code will soon -->
+                                        <!-- be deprecated (once we switch to compulsary 4.12+ for the builds). -->
+                                        <child>
+                                          <object class="GtkBox" id="preferences_bg_colour_vbox">
+                                            <property name="orientation">vertical</property>
+                                          </object>
+                                        </child>
+
+                                      </object>
+                                    </child>
+                                  </object>
+                                </property>
+                              </object>
+                            </child>
+                          </object>
+                        </property>
+                      </object>
+                    </property>
+                    <property name="tab">
+                      <object class="GtkLabel" id="label477">
+                        <property name="visible">1</property>
+                        <property name="label" translatable="yes">Background colour</property>
+                      </object>
+                    </property>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkNotebookPage">
+                    <property name="position">15</property>
+                    <property name="child">
+                      <object class="GtkFrame" id="preferences_font">
+                        <property name="visible">1</property>
+                        <property name="child">
+                          <object class="GtkBox" id="vbox255">
+                            <property name="orientation">vertical</property>
+                            <child>
+                              <object class="GtkFrame" id="frame286">
+                                <property name="valign">center</property>
+                                <property name="visible">1</property>
+                                <property name="child">
+                                  <object class="GtkBox" id="vbox298">
+                                    <property name="orientation">vertical</property>
+                                    <child>
+                                      <object class="GtkCheckButton" id="preferences_font_colour_default_radiobutton">
+                                        <property name="valign">center</property>
+                                        <property name="label" translatable="yes">Default</property>
+                                        <property name="use-underline">1</property>
+                                        <signal name="toggled" handler="on_preferences_font_colour_default_radiobutton_toggled" swapped="no"/>
+                                      </object>
+                                    </child>
+                                    <child>
+                                      <object class="GtkBox" id="hbox382">
+                                        <property name="valign">center</property>
+                                        <child>
+                                          <object class="GtkCheckButton" id="preferences_font_colour_own_radiobutton">
+                                            <property name="halign">center</property>
+                                            <property name="label" translatable="yes">Own label colour </property>
+                                            <property name="tooltip-text" translatable="yes">Select to choose you own colour</property>
+                                            <property name="use-underline">1</property>
+                                            <property name="group">preferences_font_colour_default_radiobutton</property>
+                                            <signal name="toggled" handler="on_preferences_font_colour_own_radiobutton_toggled" swapped="no"/>
+                                          </object>
+                                        </child>
+                                        <child>
+                                          <!-- come back and change this to a GtkColorDialogButton when we move to 4.12 -->
+                                          <object class="GtkColorButton" id="preferences_font_colorbutton">
+                                            <property name="halign">center</property>
+                                            <property name="visible">1</property>
+                                            <property name="focusable">1</property>
+                                            <property name="tooltip-text" translatable="yes">click here to change font colours</property>
+                                            <property name="title" translatable="yes">Pick a Font Colour</property>
+                                            <signal name="color-set" handler="on_preferences_font_colorbutton_color_set" swapped="no"/>
+                                          </object>
+                                        </child>
+                                      </object>
+                                    </child>
+                                  </object>
+                                </property>
+                                <child type="label">
+                                  <object class="GtkLabel" id="label700">
+                                    <property name="visible">1</property>
+                                    <property name="label" translatable="yes">Atom Label Colour</property>
+                                  </object>
+                                </child>
+                              </object>
+                            </child>
+                          </object>
+                        </property>
+                      </object>
+                    </property>
+                    <property name="tab">
+                      <object class="GtkLabel" id="label591">
+                        <property name="visible">1</property>
+                        <property name="label" translatable="yes">Fonts</property>
+                      </object>
+                    </property>
+                  </object>
+                </child>
+
+                <!-- <child> -->
+                <!--   <object class="GtkNotebookPage"> -->
+                <!--     <property name="position">16</property> -->
+                <!--     <property name="child"> -->
+                <!--       <object class="GtkFrame" id="preferences_tips"> -->
+                <!--         <property name="visible">1</property> -->
+                <!--         <property name="child"> -->
+                <!--           <object class="GtkBox" id="vbox265"> -->
+                <!--             <property name="orientation">vertical</property> -->
+                <!--             <child> -->
+                <!--               <object class="GtkFrame" id="frame264"> -->
+                <!--                 <property name="visible">1</property> -->
+                <!--                 <property name="child"> -->
+                <!--                   <object class="GtkBox" id="vbox266"> -->
+                <!--                     <property name="orientation">vertical</property> -->
+                <!--                     <child> -->
+                <!--                       <object class="GtkCheckButton" id="preferences_tips_on_radiobutton"> -->
+                <!--                         <property name="valign">center</property> -->
+                <!--                         <property name="label" translatable="yes">Yes</property> -->
+                <!--                         <property name="use-underline">1</property> -->
+                <!--                         <signal name="toggled" handler="on_preferences_tips_on_radiobutton_toggled" swapped="no"/> -->
+                <!--                       </object> -->
+                <!--                     </child> -->
+                <!--                     <child> -->
+                <!--                       <object class="GtkCheckButton" id="preferences_tips_off_radiobutton"> -->
+                <!--                         <property name="valign">center</property> -->
+                <!--                         <property name="label" translatable="yes">No</property> -->
+                <!--                         <property name="use-underline">1</property> -->
+                <!--                         <property name="group">preferences_tips_on_radiobutton</property> -->
+                <!--                         <signal name="toggled" handler="on_preferences_tips_off_radiobutton_toggled" swapped="no"/> -->
+                <!--                       </object> -->
+                <!--                     </child> -->
+                <!--                   </object> -->
+                <!--                 </property> -->
+                <!--                 <child type="label"> -->
+                <!--                   <object class="GtkLabel" id="label607"> -->
+                <!--                     <property name="visible">1</property> -->
+                <!--                     <property name="label" translatable="yes">Show Coot Tips on start-up?</property> -->
+                <!--                     <property name="use-markup">1</property> -->
+                <!--                   </object> -->
+                <!--                 </child> -->
+                <!--               </object> -->
+                <!--             </child> -->
+                <!--           </object> -->
+                <!--         </property> -->
+                <!--       </object> -->
+                <!--     </property> -->
+                <!--     <property name="tab"> -->
+                <!--       <object class="GtkLabel" id="label578"> -->
+                <!--         <property name="visible">1</property> -->
+                <!--         <property name="label" translatable="yes">Coot Tips</property> -->
+                <!--       </object> -->
+                <!--     </property> -->
+                <!--   </object> -->
+                <!-- </child> -->
+
+                <child>
+                  <object class="GtkNotebookPage">
+                    <property name="position">17</property>
+                    <property name="child">
+                      <object class="GtkFrame" id="preferences_console">
+                        <property name="visible">1</property>
+                        <property name="child">
+                          <object class="GtkBox" id="vbox246">
+                            <property name="orientation">vertical</property>
+                            <child>
+                              <object class="GtkFrame" id="frame240">
+                                <property name="visible">1</property>
+                                <property name="child">
+                                  <object class="GtkBox" id="vbox247">
+                                    <property name="orientation">vertical</property>
+                                    <child>
+                                      <object class="GtkCheckButton" id="preferences_console_info_on_radiobutton">
+                                        <property name="valign">center</property>
+                                        <property name="label" translatable="yes">Yes</property>
+                                        <property name="use-underline">1</property>
+                                        <signal name="toggled" handler="on_preferences_console_info_on_radiobutton_toggled" swapped="no"/>
+                                      </object>
+                                    </child>
+                                    <child>
+                                      <object class="GtkCheckButton" id="preferences_console_info_off_radiobutton">
+                                        <property name="valign">center</property>
+                                        <property name="label" translatable="yes">No</property>
+                                        <property name="use-underline">1</property>
+                                        <property name="group">preferences_console_info_on_radiobutton</property>
+                                        <signal name="toggled" handler="on_preferences_console_info_off_radiobutton_toggled" swapped="no"/>
+                                      </object>
+                                    </child>
+                                  </object>
+                                </property>
+                                <child type="label">
+                                  <object class="GtkLabel" id="label567">
+                                    <property name="visible">1</property>
+                                    <property name="label" translatable="yes">Display state commands in console?</property>
+                                    <property name="use-markup">1</property>
+                                  </object>
+                                </child>
+                              </object>
+                            </child>
+                          </object>
+                        </property>
+                      </object>
+                    </property>
+                    <property name="tab">
+                      <object class="GtkLabel" id="label569">
+                        <property name="visible">1</property>
+                        <property name="label" translatable="yes">Console</property>
+                      </object>
+                    </property>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkNotebookPage">
+                    <property name="position">18</property>
+                    <property name="child">
+                      <object class="GtkFrame" id="preferences_pink_pointer">
+                        <property name="visible">1</property>
+                        <property name="child">
+                          <object class="GtkBox" id="vbox257">
+                            <property name="orientation">vertical</property>
+                            <child>
+                              <object class="GtkLabel" id="label585">
+                                <property name="valign">center</property>
+                                <property name="visible">1</property>
+                                <property name="label" translatable="yes">Central Crosshairs Size</property>
+                                <property name="justify">center</property>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="GtkFrame" id="frame250">
+                                <property name="valign">center</property>
+                                <property name="visible">1</property>
+                                <property name="child">
+                                  <object class="GtkBox" id="hbox324">
+                                    <child>
+                                      <object class="GtkLabel" id="label582">
+                                        <property name="halign">center</property>
+                                        <property name="visible">1</property>
+                                        <property name="label" translatable="yes">Size: </property>
+                                        <property name="justify">center</property>
+                                      </object>
+                                    </child>
+                                    <child>
+                                      <object class="GtkEntry" id="preferences_pink_pointer_entry">
+                                        <property name="halign">center</property>
+                                        <property name="visible">1</property>
+                                        <property name="focusable">1</property>
+                                        <signal name="activate" handler="on_preferences_pink_pointer_entry_activate" swapped="no"/>
+                                        <signal name="changed" handler="on_preferences_pink_pointer_entry_changed" swapped="no"/>
+                                      </object>
+                                    </child>
+                                    <child>
+                                      <object class="GtkLabel" id="label583">
+                                        <property name="halign">center</property>
+                                        <property name="visible">1</property>
+                                        <property name="label" translatable="yes"> Ångström</property>
+                                        <property name="justify">center</property>
+                                      </object>
+                                    </child>
+                                    <child>
+                                      <object class="GtkLabel" id="label584">
+                                        <property name="halign">center</property>
+                                        <property name="visible">1</property>
+                                        <property name="label" translatable="yes">  </property>
+                                        <property name="justify">center</property>
+                                      </object>
+                                    </child>
+                                  </object>
+                                </property>
+                              </object>
+                            </child>
+                          </object>
+                        </property>
+                      </object>
+                    </property>
+                    <property name="tab">
+                      <object class="GtkLabel" id="label606">
+                        <property name="visible">1</property>
+                        <property name="label" translatable="yes">Central Crosshairs</property>
+                      </object>
+                    </property>
+                  </object>
+                </child>
+              </object>
+            </child>
+          </object>
+        </child>
+        <child type="action">
+          <object class="GtkBox" id="hbox115">
+            <child>
+              <object class="GtkButton" id="preferences_ok_button">
+                <property name="visible">1</property>
+                <property name="label">Close</property>
+                <property name="focusable">1</property>
+                <property name="margin-start">4</property>
+                <property name="margin-end">4</property>
+                <property name="margin-top">4</property>
+                <property name="margin-bottom">4</property>
+                <signal name="clicked" handler="on_preferences_ok_button_clicked" swapped="no"/>
+              </object>
+            </child>
+          </object>
+        </child>
+      </object>
+    </child>
+  </object>
+</interface>

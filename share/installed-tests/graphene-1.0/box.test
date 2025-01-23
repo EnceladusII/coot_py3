@@ -1,0 +1,4 @@
+[Test]
+Type=session
+Exec=/home/jenkins/workspace/CCP4/coot-gtk4-linux/devtools/install/libexec/installed-tests/graphene-1.0/box
+TestEnvironment=MUTEST_OUTPUT=tap;
